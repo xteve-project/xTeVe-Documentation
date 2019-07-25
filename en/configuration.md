@@ -559,7 +559,7 @@ Streaming Server (Provider) --> xTeVe --> Plex / Emby / xteve.m3u
 ```
 If the buffer is disabled, only the streaming URL is passed to the client. xTeVe is then no longer involved.
 
-- **Buffer Size:** Defines the buffer size. If a streaming segment is smaller for an HLS stream, the default of the provider is used. Defines the buffer size. If an HLS streaming segment is smaller than the buffer size, the default of the provider is used.
+- **Buffer Size:** Size of the buffer. If the size of an HLS segment smaller than the buffer size, the size will be used by the HLS segment.  
 
 - **Timeout for new client connections:** xTeVe waits for the set time before new connections are allowed. Helpful for fast channel switching.
 
