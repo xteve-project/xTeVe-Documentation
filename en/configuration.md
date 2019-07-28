@@ -23,7 +23,7 @@
 * [API documentation](#api)
 
 ## Run on Windows
-xteve.exe is a binary file and just needs to be started. With a double click xTeVe is started.
+xteve.exe is a binary file and needs to be started with a double click.
 
 ## Run on other operating systems
 **Linux, OS X, FreeBSD**
@@ -412,7 +412,7 @@ By clicking on a guide in the overview this can be edited.
 
 The mapping function allows you to edit the channels from the playlists.  
 Only active channels (green) are passed to Plex, Emby and the xteve.m3u playlist.
-For a channel to be active, it must be assigned to an XMLTV channel. New channels e.g. new filter rules automatically assign an XMLTV file if the IDs from the M3U and XMLTV file match.
+For a channel to be active, it must be assigned to an XMLTV channel. New channels e.g. new filter rules automatically assign an XMLTV file if the IDs from the M3U and XMLTV file match. New channels get the first free channel number after 1000.
 
 > tvg-id (M3U) == channel id (XMLTV)
 
