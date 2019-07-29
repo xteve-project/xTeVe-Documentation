@@ -1,6 +1,6 @@
 # xTeVe - Setup and configuration
 
-### Setup
+## Setup
 #### Run xTeVe
 
 * [Windows](#run-on-windows)
@@ -20,7 +20,14 @@
 * [Log](#log)
 
 #### API Interface
+
 * [API documentation](#api)
+
+### Troubleshooting
+
+* [General](troubleshooting.md#general)
+* [xTeVe](troubleshooting.md#xteve)
+* [Plex](troubleshooting.md#plex)
 
 ## Run on Windows
 xteve.exe is a binary file and needs to be started with a double click.
@@ -412,9 +419,11 @@ By clicking on a guide in the overview this can be edited.
 
 The mapping function allows you to edit the channels from the playlists.  
 Only active channels (green) are passed to Plex, Emby and the xteve.m3u playlist.
-For a channel to be active, it must be assigned to an XMLTV channel. New channels e.g. new filter rules automatically assign an XMLTV file if the IDs from the M3U and XMLTV file match. New channels get the first free channel number after 1000.
+For a channel to be active, it must be assigned to an XMLTV channel. New channels e.g. new filter rules automatically assign an XMLTV file if the IDs from the M3U and XMLTV file match.
 
 > tvg-id (M3U) == channel id (XMLTV)
+
+New channels get the first free channel number after 1000.
 
 If no EPG data is available for a channel, the [xTeVe Dummy](#xteve-dummy) can be used.
 
