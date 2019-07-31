@@ -23,7 +23,7 @@
 
 * [API documentation](#api)
 
-### Troubleshooting
+## Troubleshooting
 
 * [General](troubleshooting.md#general)
 * [xTeVe](troubleshooting.md#xteve)
