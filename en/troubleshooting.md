@@ -53,7 +53,8 @@ On the Mac:
 ##### Device not found. Ensure your device is powered on and connected to your network.
 
 If you're setting up xTeVe for the first time in Plex, that's normal, just restart Plex. If you often have the problem, it's usually a network problem.  
-xTeVe is a UPnP server, which means it sends broadcast requests in the IPv4 network. If your server gets the IP address via DHCP, everything should work. If you have assigned the IP address yourself, you must also specify a broadcast address.
+xTeVe is a UPnP server and sends broadcast requests into the IPv4 network. If your server gets the IP address via DHCP, everything should work. If you have assigned the IP address yourself, you must also specify a broadcast address.
+UPnP must be allowed in the network and must not be blocked by a firewall.
 
 ```
 Network:   192.168.0.0/24
