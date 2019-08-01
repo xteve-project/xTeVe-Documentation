@@ -433,6 +433,15 @@ If no EPG data is available for a channel, the [xTeVe Dummy](#xteve-dummy) can b
 
 **Bulk Edit:** Allows editing multiple channels with the same settings e.g. EPG categories.  
 
+**Search:** The following terms can be searched.  
+
+- Channel name
+- Channel position
+- Group title
+- Categories
+- XMLTV file
+- Channel status (online / offline)
+
 **Featured:**  
 
 - Change the channel number and thus the order of the channels in Plex, Emby and the M3U (xteve.m3u). By clicking on the channel number, it can be changed.
@@ -558,8 +567,9 @@ The following authorizations for the selected user are possible:
 
 - **Location for the temporary files:** Path in which the temporary files are stored.
 
-
 - **Image caching:** All required images from the XMLTV files are downloaded and saved. Enables faster EPG queries by the client.
+
+- **Replace missing program images:** If there is no poster in the XMLTV file, the channel logo will be used.
 
 #### Streaming
 - **Stream Buffer:** When the buffer is enabled, only xTeVe connects to the streaming server and forwards the video data to the clients unchanged. xTeVe monitors all client connections and allows re-streaming, so that multiple clients can request the same stream and it is only one connection to the provider.
