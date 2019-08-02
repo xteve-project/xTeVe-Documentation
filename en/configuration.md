@@ -23,6 +23,10 @@
 
 * [API documentation](#api)
 
+#### Scripts
+* [Linux startup script](scripts.md#linux-systemd)
+* [FreeBSD startup script](scripts.md#freebsd-service)
+
 ## Troubleshooting
 
 * [General](troubleshooting.md#general)
