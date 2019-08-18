@@ -10,7 +10,7 @@ Plex and Emby will only display EPG data if it is current. If only old data is i
 To check an XMLTV file can be opened with a text editor
 
 XMLTV example:
-```
+```XML
 <programme channel="guide2go.90447.schedulesdirect.org" start="20190608004300 +0000" stop="20190608004500 +0000">
     <title lang="de">Tagesschau</title>
     <sub-title lang="de">vom 08.06.2019, 02:43 Uhr</sub-title>
@@ -44,6 +44,17 @@ On the Mac:
 > Shift + CMD + M
 
 ![Wizard](../images/vlc-01.png "VLC - Debug")
+If the error is reproducible also in VLC, the operator of the streaming server should be informed.  
+
+
+
+#### Client show an xTeVe error message that no more streams are available.
+
+![Playlist](../images/playlist-02.jpg "xTeVe - Playlist limit")
+
+##### The following should be checked:
+1. With activated buffer, each playlist has a separate tuner / stream limit.  
+2. The timeout for a channel switch should be increased in the xTeVe settings.  
 
 ---
 
@@ -64,6 +75,9 @@ Broadcast: 192.168.0.255
 #### Plex does not play the stream.
 Plex DVR does not support any streaming format. 
 To test the streams, the xteve.m3u can also be opened with the VLC Player.
+```
+URL: http://xteve.ip:port/m3u/xteve.m3u
+```
 
 #### Plex DVR can not be set up or channels are missing.
 In Plex version 1.15 or higher, there is a bug in specifying the XMLTV link (HTTP)

@@ -19,11 +19,14 @@
 * [Settings](#settings)
 * [Log](#log)
 
+#### M3U
+* [M3U Export](#m3u-export)
+
 #### API Interface
 
 * [API documentation](#api)
 
-#### Scripts
+## Scripts
 * [Linux startup script](scripts.md#linux-systemd)
 * [FreeBSD startup script](scripts.md#freebsd-service)
 
@@ -229,7 +232,12 @@ Click on **New** to add a new playlist or tuner.
 192.168.178.5:5004
 ```
 
-**Tuner / Streams:** Number of concurrent streams for this playlist. Only with activated [buffer](#buffer).  
+**Tuner / Streams:** Number of concurrent streams for this playlist. Only with **activated** [buffer](#buffer).  
+When the limit is exceeded, no connection is established to the streaming server / provider. The client (Plex, Emby, xteve.m3u) receives an error message as a video stream.  
+
+![Playlist](../images/playlist-02.jpg "xTeVe - Playlist limit")
+
+
 
 
 #### Edit playlist
@@ -556,7 +564,7 @@ The following authorizations for the selected user are possible:
 ## Settings
 
 #### General
-- **Automatic update of xTeVe:** It is checked regularly, if a new version is available. An update will be installed automatically. xTeVe requires write permission for the folder in which the binary is located. The following information is sent to an update server: name of the operating system (Windows, Linux etc.), processor architecture (amd64, arm64 ect.) And the Git Branch.
+- **Automatic update of xTeVe:** It is checked regularly, if a new version is available. An update will be installed automatically. xTeVe requires write permission for the folder in which the binary is located. The updates are downloaded from GitHub.
 
 - **Number of tuners:** Number of tuners provided by xTeVe. Used by Plex, Emby HDHR and xteve.m3u (with buffer enabled only). If the buffer is activated, the tuner limit for each playlist / tuner can be set separately. The tuner limit should then be the sum of all tuner limits in the playlist.
 
@@ -604,6 +612,35 @@ In the [user settings](#users), the user must be assigned the authorization.
 
 ## Log
 Displays the xTeVe log and refreshes every 10 seconds. All entries are in RAM. The log is maximum 500 entries, older entries are deleted. The button **Empty Log** deletes the log, warnings and errors are reset.
+
+## M3U-Export
+In the [settings](#settings), the EPG source must be set to XEPG.
+All active channels in the Mapping menu are exported to an M3U playlist.
+Group Title and channel name can be changed in the [Mapping](#mapping) menu.
+The playlist can be downloaded via the following URL.
+
+**Without user authentication:**  
+```
+http://xteve.ip:port/m3u/xteve.m3u
+```
+
+**With user authentication:**  
+User must have authorization M3U.  
+```
+http://xteve.ip:port/m3u/xteve.m3u?username=xxx&password=yyy
+```
+
+**Export channels of a specific group:**  
+In this example, only the active channels of group **foo** and **bar** are exported:  
+```
+http://xteve.ip:port/m3u/xteve.m3u?group-title=foo,bar
+```
+
+The same example with user authentication:  
+```
+http://xteve.ip:port/m3u/xteve.m3u?username=xxx&password=yyy&group-title=foo,bar
+```
+
 
 ## API
 With the API interface it is possible to send commands to xTeVe. To use the API, it must be enabled in the [settings](#general).  
