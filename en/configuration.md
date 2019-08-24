@@ -19,6 +19,9 @@
 * [Settings](#settings)
 * [Log](#log)
 
+#### Migration from 1.4.4 to 2.x.x
+* [Migration](#migration)
+
 #### M3U
 * [M3U Export](#m3u-export)
 
@@ -612,6 +615,33 @@ In the [user settings](#users), the user must be assigned the authorization.
 
 ## Log
 Displays the xTeVe log and refreshes every 10 seconds. All entries are in RAM. The log is maximum 500 entries, older entries are deleted. The button **Empty Log** deletes the log, warnings and errors are reset.
+
+---
+
+## Migration
+The binary must have the permission to execute.  
+
+**Web Interface:**  
+1. Make a backup of 1.4.4 (Settings -> Backup)  
+2. Stop xTeVe 1.4.4  
+3. Start xTeVe 2.x.x
+4. Go through the wizard  
+5. Restore the configuration of 1.4.4 (Setting -> Restore -> Select backup file)  
+
+
+**Command line - CLI**
+1. Open a terminal  
+2. Go to the folder where the xTeVe binary is located  
+```
+cd /path/to/xteve/folder/
+```
+3. Restore a backup file  
+```
+./xteve -restore /path/to/backup/xteve_backup_YYYYMMDD_HHMM.zip
+```
+4. Start xTeVe  
+
+---
 
 ## M3U-Export
 In the [settings](#settings), the EPG source must be set to XEPG.
