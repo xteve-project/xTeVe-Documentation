@@ -587,7 +587,7 @@ The following authorizations for the selected user are possible:
 - **Replace missing program images:** If there is no poster in the XMLTV file, the channel logo will be used.
 
 #### Streaming
-- **Stream Buffer:** With activated buffer, the streams are buffered and forwarded to the clients unchanged. FFmpeg, VLC or xTeVe can be selected as a buffer.  
+- **Stream Buffer:** With activated buffer, the streams are buffered and forwarded to the clients unchanged. FFmpeg, VLC or xTeVe can be selected as a buffer. xTeVe monitors all client connections and allows re-streaming, so that multiple clients can request the same stream and it is only one connection to the provider.
 For FFmpeg and VLC, the common program must be installed and the path to the program specified.
 ```
 Streaming Server (Provider) --> (xTeVe / FFmpeg / VLC) --> Plex / Emby / xteve.m3u
