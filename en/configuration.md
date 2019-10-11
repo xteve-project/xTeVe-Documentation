@@ -587,9 +587,10 @@ The following authorizations for the selected user are possible:
 - **Replace missing program images:** If there is no poster in the XMLTV file, the channel logo will be used.
 
 #### Streaming
-- **Stream Buffer:** When the buffer is enabled, only xTeVe connects to the streaming server and forwards the video data to the clients unchanged. xTeVe monitors all client connections and allows re-streaming, so that multiple clients can request the same stream and it is only one connection to the provider.
+- **Stream Buffer:** With activated buffer, the streams are buffered and forwarded to the clients unchanged. FFmpeg, VLC or xTeVe can be selected as a buffer.  
+For FFmpeg and VLC, the common program must be installed and the path to the program specified.
 ```
-Streaming Server (Provider) --> xTeVe --> Plex / Emby / xteve.m3u
+Streaming Server (Provider) --> (xTeVe / FFmpeg / VLC) --> Plex / Emby / xteve.m3u
 ```
 If the buffer is disabled, only the streaming URL is passed to the client. xTeVe is then no longer involved.
 
@@ -597,7 +598,15 @@ If the buffer is disabled, only the streaming URL is passed to the client. xTeVe
 
 - **Timeout for new client connections:** xTeVe waits for the set time before new connections are allowed. Helpful for fast channel switching.
 
-- **User agent:** Defines which user agent should be in the header of an HTTP connection.
+- **User Agent:** Defines which user agent should be in the header of an HTTP connection and xTeVe buffer.  
+
+- **FFmpeg Binary Path:** File path to FFmpeg.  
+
+- **FFmpeg Options:** FFmpeg options, with the default settings no stream is transcoded only remuxing. Further parameters are available [here.](https://ffmpeg.org/ffmpeg.html)  
+
+- **VLC Binary Path:** File path to VLC or CVLC.  
+
+- **VLC Options:** VLC options, with the default settings no stream is transcoded only remuxing. Further parameters are available [here.](https://wiki.videolan.org/Documentation:Command_line/) 
 
 #### Backup
 - **Location for automatic backups:** Location for automatic backups. xTeVe needs write permission for this folder
