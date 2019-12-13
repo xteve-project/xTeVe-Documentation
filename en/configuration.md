@@ -621,7 +621,7 @@ If the buffer is disabled, only the streaming URL is passed to the client. xTeVe
 
 - **Timeout for new client connections:** xTeVe waits for the set time before new connections are allowed. Helpful for fast channel switching.
 
-- **User Agent:** Defines which user agent should be in the header of an HTTP connection and xTeVe buffer.  
+- **User Agent:** Defines which user agent should be in the header of an HTTP connection and buffer.  
 
 - **FFmpeg Binary Path:** File path to FFmpeg.  
 
