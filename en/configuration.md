@@ -474,6 +474,26 @@ By clicking on a channel, the editing mode opens for this channel.
 
 **Channe Name:** Changing the channel name, if the name contains **HD**, all programs of this channel in the xteve.xml file are declared as HD.  
 
+**Channel Description:** This entry is also adopted by the [xTeVe Dummy](#xteve-dummy) as a programm description in the xteve.xml file.  
+xteve.xml:
+```XML
+<programme channel="1000" start="20191213020000 +0100" stop="20191213040000 +0100">
+    <title lang="en">Das Erste HD (Fr. 02:00 - 04:00)</title>
+    <desc lang="en">This is a description of this channel</desc>
+    ...
+</programme>
+```
+
+If no value is entered, a default value is used.  
+xteve.xml (default description):
+```XML
+<programme channel="1000" start="20191213020000 +0100" stop="20191213040000 +0100">
+    <title lang="en">Das Erste HD (Fr. 02:00 - 04:00)</title>
+    <desc lang="en">xTeVe: (120 Minutes) Friday 02:00 - 04:00</desc>
+    ...
+</programme>
+```
+
 **Update Channel Name:** If the channel name of the stream in the playlist changes, the channel name is updated automatically. This feature is only available if the stream in the playlist has a [unique ID](#overview-playlist).  
 
 **Logo URL:** Change the channel logo with an image URL. By clicking on the **Upload Logo** button you can also upload your own logo. xTeVe then provides these via its own web server.  
@@ -573,7 +593,10 @@ The following authorizations for the selected user are possible:
 
 - **EPG Source:** Selection of the EPG (Electronic Program Guide) source.
 
-- **API Interface:** Activates the [API](#api) interface
+- **API Interface:** Activates the [API](#api) interface  
+
+- **URL protocol (M3U / XML):** Defines which URL protocol should be used for the internal streaming and image URLs that links to xTeVe (HTTP or HTTPS). When using an HTTPS reverse proxy, the URL protocol must be adjusted to HTTPS.  
+The DVR lineup for Plex and Emby (HDHR) has no influence to this. HTTP URLs are still used.  
 
 #### Files
 - **Schedule for updating:** Time at which all playlists, tuners and XMLTV files should be updated.
@@ -638,7 +661,7 @@ The binary must have the permission to execute.
 5. Restore the configuration of 1.4.4 (Setting -> Restore -> Select backup file)  
 
 
-**Command line - CLI**
+**Command line - CLI**  
 1. Open a terminal  
 2. Go to the folder where the xTeVe binary is located  
 ```
