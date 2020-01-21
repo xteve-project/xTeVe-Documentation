@@ -42,6 +42,18 @@
 ## Run on Windows
 xteve.exe is a binary file and needs to be started with a double click.
 
+## Xteve as a Windows Service
+1. Download NSSM from https://nssm.cc/release/nssm-2.24.zip
+2. Unzip and copy NSSM to C:\windows\System32 folder
+3. Open a command prompt
+4. Use the following command: nssm install Xteve
+5. Path C:\PathToXteve\xteve.exe
+6. Startup directory C:\PathToXteve
+7. Arguments (If any) : -config=C:\PathToXteve\Config or -port="XXXX" (For XXXX use the port you desire)
+8. Click Install service.
+9. From the command prompt run this command: nssm start Xteve
+10. Xteve should now start as a service.
+
 ## Run on other operating systems
 **Linux, OS X, FreeBSD**
 
