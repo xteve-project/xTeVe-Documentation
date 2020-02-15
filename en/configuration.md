@@ -180,6 +180,9 @@ If the available streams are 0, the limit of 480 is exceeded and the [filter](#f
 
 **XEPG URL:** XMLTV URL for Plex, Emby or other IPTV Apps. (XEPG only)  
 
+**Download as GZIP:** `http://xeteve.ip:34400/xmltv/xteve.xml.gz`  
+The IPTV client must support GZIP for EPG data (**Plex does not support GZIP**)
+
 **Errors:** Errors that have occurred. Are displayed in the [log](#log).  
 
 **Warnings:** System warnings. Are displayed in the [log](#log).  
@@ -594,9 +597,6 @@ The following authorizations for the selected user are possible:
 - **EPG Source:** Selection of the EPG (Electronic Program Guide) source.
 
 - **API Interface:** Activates the [API](#api) interface  
-
-- **URL protocol (M3U / XML):** Defines which URL protocol should be used for the internal streaming and image URLs that links to xTeVe (HTTP or HTTPS). When using an HTTPS reverse proxy, the URL protocol must be adjusted to HTTPS.  
-The DVR lineup for Plex and Emby (HDHR) has no influence to this. HTTP URLs are still used.  
 
 #### Files
 - **Schedule for updating:** Time at which all playlists, tuners and XMLTV files should be updated.
