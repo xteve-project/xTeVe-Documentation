@@ -15,7 +15,7 @@ After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/path_to_executable/xteve 
+ExecStart=/path_to_executable/xteve [-options]
 ExecReload=/usr/bin/killall xteve
 ExecStop=/usr/bin/killall xteve
 KillMode=process
