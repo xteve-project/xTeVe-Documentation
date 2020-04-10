@@ -2,10 +2,17 @@
 
 ## Setup
 #### Run xTeVe
-
+* [CLI Options] (#CLI-Options)
 * [Windows](#run-on-windows)
 * [Linux, OS X, FreeBSD](#run-on-other-operating-systems)
 * [Console information](#console-information)
+
+#### CLI Options
+
+Arguments (If any) : 
+1. -config=C:\PathToXteve\Config
+2. -port="XXXX" (For XXXX use the port you desire)
+
 
 #### xTeVe configuration
 
