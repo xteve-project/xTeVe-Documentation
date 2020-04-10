@@ -7,7 +7,7 @@
 * [Linux, OS X, FreeBSD](#run-on-other-operating-systems)
 * [Console information](#console-information)
 
-#### CLI Options
+#### CLI-Options
 
 Arguments (If any) : 
 1. -config=C:\PathToXteve\Config
