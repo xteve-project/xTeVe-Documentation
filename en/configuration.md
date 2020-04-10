@@ -2,7 +2,7 @@
 
 ## Setup
 #### Run xTeVe
-* [CLI Options] (#CLI-Options)
+* [CLI-Options](#CLI-Options)
 * [Windows](#run-on-windows)
 * [Linux, OS X, FreeBSD](#run-on-other-operating-systems)
 * [Console information](#console-information)
