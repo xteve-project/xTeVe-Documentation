@@ -732,9 +732,9 @@ A response comes only when xTeVe has finished the command.
 If authentication of the API interface is activated, the first thing to do is to log in. The user needs the authorization [API].
 
 #### API - Login
-
-**Method:** POST
-**Request:** With authentication
+**URL**: http://xteve.ip:port/api/  
+**Method:** POST  
+**Request:** With authentication  
 ```JSON
 {
   "cmd": "login",
