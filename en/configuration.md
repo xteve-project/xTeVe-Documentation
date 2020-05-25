@@ -753,7 +753,7 @@ If authentication of the API interface is activated, the first thing to do is to
 **token:** This is in one-time token, this is valid only once and only for 60 minutes. For each API request, the token must be specified and a new token is returned.
 
 #### API - xTeVe Status
-
+**URL**: http://xteve.ip:port/api/  
 **Method:** POST  
 **Request:** With authentication  
 ```JSON
@@ -784,7 +784,7 @@ If authentication of the API interface is activated, the first thing to do is to
 If authentication is disabled, the token does not need to be specified.
 
 #### API - Update all M3U playlists and apply the filter
-
+**URL**: http://xteve.ip:port/api/  
 **Method:** POST  
 **Request:** Without authentication  
 ```JSON
@@ -801,7 +801,7 @@ If authentication is disabled, the token does not need to be specified.
 ```
 
 #### API - Update all HDHomeRun tuner and apply the filter
-
+**URL**: http://xteve.ip:port/api/  
 **Method:** POST  
 **Request:** Without authentication  
 ```JSON
@@ -818,7 +818,7 @@ If authentication is disabled, the token does not need to be specified.
 ```
 
 #### API - Update all XMLTV files
-
+**URL**: http://xteve.ip:port/api/  
 **Method:** POST  
 **Request:** Without authentication  
 ```JSON
@@ -835,7 +835,7 @@ If authentication is disabled, the token does not need to be specified.
 ```
 
 #### API - Update XEPG (Mapping, xteve.xml, xteve.m3u)
-
+**URL**: http://xteve.ip:port/api/  
 **Method:** POST  
 **Request:** Without authentication  
 ```JSON
