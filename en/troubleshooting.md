@@ -79,7 +79,7 @@ FFmpeg Options:
 ```
 -hide_banner -loglevel error -i [URL] -c:a libmp3lame -vcodec copy -f mpegts pipe:1
 ```
-Audio is transcoded to MP3 stereo
+Audio is transcoded to MP3 stereo.  
 To check the streams of the source, the xteve.m3u can be tested with VLC.  
 VLC: Open Network
 ```
