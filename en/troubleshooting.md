@@ -73,8 +73,15 @@ Broadcast: 192.168.0.255
 ```
 
 #### Plex does not play the stream.
-Plex DVR does not support any streaming format. 
-To test the streams, the xteve.m3u can also be opened with the VLC Player.
+Plex DVR is not compatible with all streaming formats, most problems are incompatible audio codecs. In this case it helps to use FFmpeg as a buffer and changed FFmpeg parameters.  
+xTeVe Settings -> Stream Buffer = FFmpeg  
+FFmpeg Options:
+```
+-hide_banner -loglevel error -i [URL] -c:a libmp3lame -vcodec copy -f mpegts pipe:1
+```
+Audio is transcoded to MP3 stereo
+To check the streams of the source, the xteve.m3u can be tested with VLC.  
+VLC: Open Network
 ```
 URL: http://xteve.ip:port/m3u/xteve.m3u
 ```
