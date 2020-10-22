@@ -1,6 +1,6 @@
 ## Linux Systemd
 
-Create a [systemd](https://en.wikipedia.org/wiki/Systemd) startup script. The script also works in FreBSD Jails.  
+Create a [systemd](https://en.wikipedia.org/wiki/Systemd) startup script.    
 
 1. Create a new file (xteve.service) in:
 ```
@@ -36,7 +36,7 @@ sudo systemctl start xteve
 ```
 
 ## FreeBSD Service
-Create a [rc.d](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/rc-scripting/index.html) startup script.  
+Create a [rc.d](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/rc-scripting/index.html) startup script. The script also works in FreeBSD Jails.  
 
 1. Create a new file (/etc/rc.d/) in:
 2. Open the file with an text editor and copy the following content:
