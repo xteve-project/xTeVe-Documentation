@@ -637,6 +637,9 @@ Streaming Server (Provider) --> (xTeVe / FFmpeg / VLC) --> Plex / Emby / xteve.m
 ```
 If the buffer is disabled, only the streaming URL is passed to the client. xTeVe is then no longer involved.
 
+- **UDPxy** This allows xTeVe to proxy multicast streams present in a playlist through [UDPxy](http://udpxy.com). UDPxy is a data stream relay, capable of listening to multicast UDP stream and provide a tcp unicast stream.
+When this is set, every multicast stream URL present in the playlist (i.e., a stream that begins with udp://@) is rewritten to be proxied through the UDPxy server configured, regardless of the buffer settings. For example, if the Stream Buffer settings is set to none, then the rewritten url will be passed to the requested; if set to ffmpeg, then ffmpeg will be instructed to access the video stream passing through UDPxy.
+
 - **Buffer Size:** Size of the buffer. If the size of an HLS segment smaller than the buffer size, the size will be used by the HLS segment.  
 
 - **Timeout for new client connections:** xTeVe waits for the set time before new connections are allowed. Helpful for fast channel switching.
