@@ -250,7 +250,8 @@ Click on **New** to add a new playlist or tuner.
 
 **Description:** Description of the playlist  
 
-**M3U File:** [URL](#m3u-playlist) or local [path](#m3u-playlist) of the playlist
+**M3U File:** [URL](#m3u-playlist) or local [path](#m3u-playlist) of the playlist 
+              (m3u_plus link will contain logos and Group-Titles which are needed for Filtering)
 
 **HDHomeRun IP:** IP address and port of the HDHomeRun tuner. The port may differ depending on the model and firmware.  
 
